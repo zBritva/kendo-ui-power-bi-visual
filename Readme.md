@@ -32,5 +32,6 @@ And then run a dev instance for PowerBI to connect to and display the visual:
 
 #### Other resources:
 
+    https://github.com/microsoft/powerbi-visuals-tools
     https://github.com/Microsoft/PowerBI-visuals
     https://github.com/Microsoft/PowerBI-visuals-sampleUsingExternalLibraries
