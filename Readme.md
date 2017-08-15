@@ -20,6 +20,16 @@ This repo uses the trial version of Kendo UI v2017.2.621 , which may be download
 
 #### How to reproduce:
 
+Start a PowerBI pro free trial if not already done:
+
+    https://app.powerbi.com/signupredirect?pbi_source=web
+
+Install PowerBI tools from:
+
+https://github.com/microsoft/powerbi-visuals-tools
+
+In this repo, install npm dependencies (jquery and its types) with:
+
     npm install
 
 And then run a dev instance for PowerBI to connect to and display the visual:
@@ -29,6 +39,8 @@ And then run a dev instance for PowerBI to connect to and display the visual:
 ... Or create and upload a package manually in your Powerbi interface with:
 
     pbiviz package
+
+Login to PowerBI, enable developer custom visuals, create a new report, drag on a developer/custom visual widget.  View the console output in the browser window displaying your developer visual, the "Illegal invocation" exception should be present.
 
 #### Other resources:
 
