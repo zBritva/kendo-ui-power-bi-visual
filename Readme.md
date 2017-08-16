@@ -4,21 +4,13 @@ This repo uses the trial version of Kendo UI v2017.2.621 , which may be download
 
     https://www.telerik.com/download-trial-file/v2/kendo-ui .
 
-#### Please note: the Telerik Kendoui component is throwing the following exception when contained within the PowerBI 'visualsandbox':
+Thanks to ignatvilesov for indicating the required snippet in:
 
-    Uncaught TypeError: Illegal invocation
-        at <anonymous>:562:21817
-        at <anonymous>:562:27218
-        at <anonymous>:563:18554
-        at <anonymous>:563:18651
-        at t.kendo.t.kendo.cultures (<anonymous>:562:21)
-        at Window.<anonymous> (<anonymous>:562:59)
-        at <anonymous>:841:20
-        at Object.r [as injectJsCode] (visualhostcore.min.js:2)
-        at i.loadWithoutResourcePackage (visualsandbox.min.js:1)
-        at i.executeMessage (visualsandbox.min.js:1)
+https://github.com/whileoneloop/kendo-ui-power-bi-visual/pull/2/commits/0f6ef60c390f82cf24a3edb34c4572fd01d66d7d
 
-#### How to reproduce:
+This fixes the "Illegal invocation" error thrown by the Telerik component.
+
+#### How to run:
 
 Start a PowerBI pro free trial if not already done:
 
@@ -40,7 +32,7 @@ And then run a dev instance for PowerBI to connect to and display the visual:
 
     pbiviz package
 
-Login to PowerBI, enable developer custom visuals, create a new report, drag on a developer/custom visual widget.  View the console output in the browser window displaying your developer visual, the "Illegal invocation" exception should be present.
+Login to PowerBI, enable developer custom visuals, create a new report, drag on a developer/custom visual widget.  View the console output in the browser window displaying your developer visual.
 
 #### Other resources:
 

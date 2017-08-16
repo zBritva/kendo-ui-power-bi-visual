@@ -43,24 +43,21 @@ module powerbi.extensibility.visual {
         public update(options: VisualUpdateOptions) {
             // this isn't current being called as kendo component is not loading ...
             this.settings = Visual.parseSettings(options && options.dataViews && options.dataViews[0]);
-            console.log('Visual update', options);
+            console.log('Visual update, options:', options);
             this.target.innerHTML = `<p>Update count: <em>${(this.updateCount++)}</em></p><div id="treeList"></div>`;
-
-            console.log('attempt to instantiate kendoTreeList...');
             try {
                 let dataSource = new kendo.data.TreeListDataSource({
-                    data: [ { name: "Jane Doe" }, { name: "John Doe" } ]
+                    data: [ { name: "Jane Doe", position: "CEO" },
+                            { name: "John Doe", position: "Accountant" } ]
                 });
-
                 (<any>window).$("#treeList").kendoTreeList({
-                    columns: [ "name" ],
+                    columns: [ 'name', 'position' ],
                     dataSource: dataSource
                 });
             }
             catch (e) {
                 console.error(e);
             }
-            console.log('after treelist create call...');
         }
 
         private static parseSettings(dataView: DataView): VisualSettings {
