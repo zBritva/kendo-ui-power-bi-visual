@@ -19,10 +19,13 @@
   },
   "externalJS": [
     "src/window.js",
-    "node_modules/powerbi-visuals-utils-dataviewutils/lib/index.js",
     "node_modules/jquery/dist/jquery.min.js",
     "src/initJquery.js",
-    "external/kendo.all.min.js"
+    "src/kendofix.js",
+    "node_modules/powerbi-visuals-utils-dataviewutils/lib/index.js",
+    "external/kendo.all.min.js",
+    "src/kendofix.js",
+    "external/kendo.treelist.min.js"
   ],
   "style": "style/visual.less",
   "capabilities": "capabilities.json",

@@ -10,7 +10,3 @@ Object.defineProperties(window, {
         }
     }
 });
-
-var kendo = { cultures: {} };
-window.kendo = kendo;
-window.window.kendo = kendo;
